@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".ReminderActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/toolbar1">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            app:titleTextColor="@color/bckd"
+            android:background="@color/startgreen"
+            app:title="Reminders"
+            app:navigationIcon="@drawable/ic_menu"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/addnotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Notes"
+        android:visibility="visible"
+        android:textStyle="italic|bold"
+        android:layout_marginTop="75dp"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/reminderRv"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp"
+        tools:listitem="@layout/item_reminder"
+        tools:itemCount="7"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/startgreen"
+        android:src="@drawable/ic_add"
+        app:elevation="6dp"
+        android:id="@+id/addReminder"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
